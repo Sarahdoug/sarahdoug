@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarah Douglas Ukpeh — Voix Française | French Voice Talent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --espresso:#241611;
+    --espresso-deep:#180e0a;
+    --surface:#34211a;
+    --surface-light:#3f281f;
+    --cream:#f3e9dd;
+    --cream-dim:#cdbdac;
+    --gold:#d9a441;
+    --lavender:#9b8ac4;
+    --line: rgba(243,233,221,0.14);
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--espresso);
+    color:var(--cream);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,audio{max-width:100%;}
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+  a{color:inherit;}
+
+  /* Waveform divider */
+  .wave{
+    width:100%; height:28px; margin:0 auto;
+    display:block;
+  }
+
+  /* Header / Hero */
+  header.hero{
+    padding:88px 0 64px;
+    background:
+      radial-gradient(ellipse 700px 380px at 15% -10%, rgba(217,164,65,0.18), transparent 60%),
+      radial-gradient(ellipse 600px 400px at 100% 0%, rgba(155,138,196,0.14), transparent 55%),
+      var(--espresso-deep);
+    border-bottom:1px solid var(--line);
+  }
+  .kicker{
+    font-family:var(--serif); font-style:italic; font-weight:500;
+    color:var(--lavender); font-size:1.05rem; margin-bottom:18px;
+    max-width:520px;
+  }
+  h1.name{
+    font-family:var(--serif); font-weight:600; font-size:clamp(2.4rem, 6vw, 4rem);
+    line-height:1.05; letter-spacing:-0.01em; max-width:11ch;
+  }
+  .tagline{
+    margin-top:22px; font-size:1.15rem; color:var(--cream-dim); max-width:52ch;
+  }
+  .hero-meta{
+    margin-top:32px; display:flex; flex-wrap:wrap; gap:10px 22px;
+    font-size:0.92rem; color:var(--cream-dim);
+  }
+  .hero-meta span{white-space:nowrap; margin-right:22px;}
+  .hero-meta span:last-child{margin-right:0;}
+  .hero-cta{
+    margin-top:36px; display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:2px;
+    font-size:0.95rem; font-weight:500; text-decoration:none;
+    border:1px solid var(--gold); transition:background .18s ease, color .18s ease;
+  }
+  .btn-primary{background:var(--gold); color:var(--espresso-deep);}
+  .btn-primary:hover{background:#e8b968;}
+  .btn-ghost{background:transparent; color:var(--cream); border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--cream-dim);}
+
+  /* Section shell */
+  section{padding:70px 0;}
+  section + section{border-top:1px solid var(--line);}
+  h2.section-title{
+    font-family:var(--serif); font-weight:600; font-size:clamp(1.6rem, 3.4vw, 2.1rem);
+    max-width:20ch; margin-bottom:14px;
+  }
+  .section-lede{color:var(--cream-dim); max-width:60ch; font-size:1.02rem; margin-bottom:44px;}
+
+  /* About */
+  .about-grid{display:grid; grid-template-columns: 1.3fr 1fr; gap:48px;}
+  .about-grid p{margin-bottom:16px; color:var(--cream-dim); font-size:1.02rem;}
+  .about-grid p strong{color:var(--cream); font-weight:500;}
+  .langs{
+    background:var(--surface); border:1px solid var(--line); padding:26px;
+  }
+  .langs h3{font-family:var(--serif); font-weight:500; font-size:1.05rem; margin-bottom:16px;}
+  .lang-row{display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid var(--line); font-size:0.94rem;}
+  .lang-row:last-child{border-bottom:none;}
+  .lang-level{color:var(--gold); font-size:0.85rem;}
+
+  /* Samples */
+  .sample{
+    background:var(--surface); border:1px solid var(--line);
+    padding:32px 32px 28px; margin-bottom:22px;
+  }
+  .sample-head{
+    display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+    flex-wrap:wrap; margin-bottom:6px;
+  }
+  .sample-title{font-family:var(--serif); font-weight:600; font-size:1.3rem;}
+  .sample-tag{
+    font-size:0.82rem; color:var(--lavender); white-space:nowrap;
+  }
+  .sample-desc{color:var(--cream-dim); font-size:0.95rem; margin:10px 0 20px; max-width:60ch;}
+  audio{width:100%; height:40px; filter:invert(0.9) sepia(0.15) saturate(0.6);}
+  .transcript{
+    margin-top:18px;
+  }
+  .transcript summary{
+    cursor:pointer; color:var(--gold); font-size:0.88rem; font-weight:500;
+    list-style:none; display:inline-flex; align-items:center; gap:6px;
+  }
+  .transcript summary::-webkit-details-marker{display:none;}
+  .transcript summary::before{content:"▸"; font-size:0.75rem; transition:transform .15s ease;}
+  .transcript[open] summary::before{transform:rotate(90deg);}
+  .transcript-body{
+    margin-top:14px; padding-top:14px; border-top:1px solid var(--line);
+    font-size:0.93rem; color:var(--cream-dim); white-space:pre-line;
+    max-height:340px; overflow-y:auto; line-height:1.75;
+  }
+
+  /* Experience */
+  .exp-item{padding:26px 0; border-bottom:1px solid var(--line);}
+  .exp-item:first-child{padding-top:0;}
+  .exp-item:last-child{border-bottom:none; padding-bottom:0;}
+  .exp-top{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:8px;}
+  .exp-role{font-family:var(--serif); font-weight:600; font-size:1.15rem;}
+  .exp-org{color:var(--gold); font-size:0.92rem; margin-top:3px;}
+  .exp-dates{color:var(--cream-dim); font-size:0.88rem; white-space:nowrap;}
+  .exp-item ul{margin-top:10px; padding-left:20px; color:var(--cream-dim); font-size:0.95rem;}
+  .exp-item li{margin-bottom:6px;}
+
+  /* Skills */
+  .skills-grid{display:flex; flex-wrap:wrap; gap:10px;}
+  .skill-pill{
+    border:1px solid var(--line); padding:9px 16px; font-size:0.88rem;
+    color:var(--cream-dim);
+  }
+
+  /* Education */
+  .edu-row{display:flex; justify-content:space-between; gap:16px; padding:16px 0; border-bottom:1px solid var(--line); flex-wrap:wrap;}
+  .edu-row:last-child{border-bottom:none;}
+  .edu-name{font-weight:500; color:var(--cream);}
+  .edu-org{color:var(--cream-dim); font-size:0.92rem;}
+  .edu-year{color:var(--cream-dim); font-size:0.88rem;}
+
+  /* Contact */
+  footer{padding:70px 0 50px;}
+  .contact-title{font-family:var(--serif); font-weight:600; font-size:clamp(1.8rem,4vw,2.4rem); max-width:14ch; margin-bottom:20px;}
+  .contact-list{display:flex; flex-direction:column; gap:12px; margin-top:28px;}
+  .contact-list a{
+    font-size:1.05rem; text-decoration:none; color:var(--cream);
+    border-bottom:1px solid var(--line); padding-bottom:10px; display:inline-block; width:fit-content;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .contact-list a:hover{color:var(--gold); border-color:var(--gold);}
+  .foot-note{margin-top:48px; color:var(--cream-dim); font-size:0.85rem;}
+
+  @media (max-width:720px){
+    .about-grid{grid-template-columns:1fr;}
+    header.hero{padding:64px 0 48px;}
+    section{padding:52px 0;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Voix française chaleureuse, précise, professionnelle.</p>
+    <h1 class="name">Sarah Douglas Ukpeh</h1>
+    <p class="tagline">Bilingual English–French voice talent, interpreter, and language instructor. I bring six years of live spoken-language work into every recording — clear articulation, natural pacing, and a tone that adapts to the brief.</p>
+    <div class="hero-meta">
+      <span>Abuja, Nigeria</span>
+      <span>Français · Anglais · Espagnol</span>
+      <span>Freelance since 2024</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#samples" class="btn btn-primary">Écouter les échantillons</a>
+      <a href="#contact" class="btn btn-ghost">Me contacter</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="section-title">Une voix formée par l'oral, pas seulement par le micro</h2>
+    <div class="about-grid">
+      <div>
+        <p>Sarah records French voiceovers for freelance clients — <strong>character voices, conversational narration, and educational content</strong> — while working full-time in live spoken French and English: teaching, interpreting, and evaluating spoken delivery for accuracy and tone.</p>
+        <p>That background shows up in the booth. She reads a script cold, adjusts pace and warmth to the brief, and can move between a calm narrator, a warm instructor, and a livelier promotional voice within the same session.</p>
+        <p>She also handles her own basic audio cleanup — leveling and removing background noise — so files arrive ready to use.</p>
+      </div>
+      <div class="langs">
+        <h3>Langues</h3>
+        <div class="lang-row"><span>Français</span><span class="lang-level">Fluent — spoken & written</span></div>
+        <div class="lang-row"><span>Anglais</span><span class="lang-level">Native / exceptional</span></div>
+        <div class="lang-row"><span>Espagnol</span><span class="lang-level">Intermediate</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="samples">
+  <div class="wrap">
+    <h2 class="section-title">Échantillons vocaux</h2>
+    <p class="section-lede">Three reads recorded in her signature "warm instructor" style — an encouraging, expressive tone she uses for language-learning content, each set in a different everyday scene.</p>
+
+    <div class="sample">
+      <div class="sample-head">
+        <span class="sample-title">La magie de la conversation quotidienne</span>
+        <span class="sample-tag">Style éducatif · avec personnage</span>
+      </div>
+      <p class="sample-desc">A warm, encouraging instructor voice, walking a learner through a first café exchange in Lyon.</p>
+      <audio controls preload="none" src="audio/script-conversation-quotidienne.mp3"></audio>
+      <details class="transcript">
+        <summary>Lire le texte</summary>
+        <div class="transcript-body">Bonjour à tous, et bienvenue ! Je suis tellement contente de vous retrouver, parce qu'aujourd'hui on plonge dans l'un de mes sujets préférés : la magie de la conversation française au quotidien.
+
+Avant de commencer, prenez une respiration. Détendez vos épaules. Apprendre une nouvelle langue peut sembler intimidant — comme être au pied d'une très haute montagne. Mais voici un secret : chaque locuteur confirmé que vous avez admiré a commencé exactement là où vous êtes en ce moment.
+
+Commençons par une scène. Vous venez d'entrer dans un petit café à Lyon. La barista lève les yeux et sourit : « Bonjour ! Qu'est-ce que je vous sers aujourd'hui ? »
+
+Vous ressentez peut-être un petit frisson de nervosité. C'est tout à fait normal ! Respirez, et essayez ceci : « Bonjour, je voudrais un café, s'il vous plaît. »
+
+Vous voyez ? Vous venez d'avoir une vraie conversation en français. Et cette barista est ravie — non pas parce que votre grammaire était parfaite, mais parce que vous avez essayé. Voilà à quoi ressemble une vraie connexion.
+
+Pratiquons ensemble. Répétez après moi, lentement : « Je... voudrais... un café. » Très bien ! Un peu plus vite : « Je voudrais un café. » Magnifique !
+
+Retenez ceci : la langue, ce n'est pas une question de perfection. C'est une question de connexion. Chaque mot pratiqué est un petit pont vers quelqu'un de nouveau, n'importe où dans le monde francophone.
+
+Alors continuez. Continuez à pratiquer. C'est exactement ainsi que la fluidité se construit — une conversation chaleureuse et imparfaite à la fois.
+
+À bientôt, tout le monde !</div>
+      </details>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head">
+        <span class="sample-title">Se présenter au travail</span>
+        <span class="sample-tag">Style éducatif · professionnel</span>
+      </div>
+      <p class="sample-desc">Same warm-instructor register, shifted toward workplace confidence — introducing yourself on a first day in Geneva.</p>
+      <audio controls preload="none" src="audio/script-se-presenter-au-travail.mp3"></audio>
+      <details class="transcript">
+        <summary>Lire le texte</summary>
+        <div class="transcript-body">Bonjour à tous, et bienvenue ! Aujourd'hui, on aborde un sujet qui revient souvent : comment se présenter avec assurance dans un contexte professionnel.
+
+Avant de commencer, prenez une respiration. Redressez les épaules — pas seulement pour la posture, mais pour la confiance ! Se présenter dans une nouvelle langue peut sembler intimidant, surtout devant de nouveaux collègues. Mais rappelez-vous : tout le monde, même les plus à l'aise, a débuté par une première présentation un peu maladroite.
+
+Imaginez la scène. C'est votre premier jour dans une nouvelle équipe, à Genève. Votre collègue vous tend la main et dit : « Bonjour, je m'appelle Claire. Et vous, vous êtes... ? »
+
+Vous prenez une petite respiration, et vous répondez : « Bonjour, je m'appelle... et je suis ravi de rejoindre l'équipe. »
+
+Voyez comme c'est simple ? Et Claire, elle est ravie — non pas parce que votre accent était parfait, mais parce que vous avez pris l'initiative de parler. C'est exactement ça, la confiance professionnelle.
+
+Pratiquons ensemble. Répétez après moi, lentement : « Je suis... ravi... de vous rencontrer. » Très bien ! Un peu plus vite : « Je suis ravi de vous rencontrer. » Excellent !
+
+Retenez ceci : une bonne première impression ne dépend pas de la perfection grammaticale — elle dépend de votre présence, de votre sourire, et de votre volonté de communiquer.
+
+Alors la prochaine fois qu'on vous demande de vous présenter, avancez avec assurance. C'est ainsi que naissent les belles collaborations — une présentation à la fois.
+
+À bientôt, tout le monde !</div>
+      </details>
+    </div>
+
+    <div class="sample">
+      <div class="sample-head">
+        <span class="sample-title">Faire ses courses au marché</span>
+        <span class="sample-tag">Style éducatif · scène animée</span>
+      </div>
+      <p class="sample-desc">The same instructor warmth given more texture and color, set at a market stall in Aix-en-Provence.</p>
+      <audio controls preload="none" src="audio/script-marche.mp3"></audio>
+      <details class="transcript">
+        <summary>Lire le texte</summary>
+        <div class="transcript-body">Bonjour à tous, et bienvenue ! Aujourd'hui, on se retrouve pour une leçon pleine de couleurs et de saveurs : faire ses courses au marché en français.
+
+Avant de commencer, prenez une respiration. Détendez vos épaules. Un marché peut sembler bruyant et un peu chaotique au début, surtout dans une langue étrangère. Mais c'est aussi l'un des endroits les plus chaleureux pour pratiquer, parce que les marchands adorent discuter !
+
+Imaginez la scène. Vous êtes au marché de Aix-en-Provence, entouré de fruits, de fromages, et d'épices. Vous vous arrêtez devant un étal de fraises, et le marchand vous demande : « Bonjour ! Vous désirez ? »
+
+Vous répondez, avec un sourire : « Bonjour, je voudrais un kilo de fraises, s'il vous plaît. »
+
+Il vous en pèse un kilo, et ajoute : « Et avec ça ? » Vous ressentez peut-être un petit moment d'hésitation — c'est tout à fait normal ! Vous pouvez simplement répondre : « Ce sera tout, merci. »
+
+Pratiquons ensemble. Répétez après moi, lentement : « Je voudrais... un kilo... de fraises. » Très bien ! Un peu plus vite : « Je voudrais un kilo de fraises. » Parfait !
+
+Retenez ceci : chaque petit échange au marché — une question, une réponse, un sourire — vous rapproche un peu plus de la fluidité. Ce n'est pas la perfection qui compte, c'est la connexion humaine.
+
+Alors la prochaine fois que vous croisez un marché, lancez-vous ! C'est exactement ainsi qu'on apprend une langue — un marchand, une fraise, une conversation à la fois.
+
+À bientôt, tout le monde !</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2 class="section-title">Parcours</h2>
+
+    <div class="exp-item">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">French Voice Talent &amp; Content Creator</div>
+          <div class="exp-org">Freelance, via Legiit</div>
+        </div>
+        <div class="exp-dates">Janvier 2024 – présent</div>
+      </div>
+      <ul>
+        <li>Records French voiceovers for freelance clients — character voices, conversational narration, and educational/explainer content.</li>
+        <li>Voices short-form social videos, language-learning material, and promotional clips, matching tone and pacing to each brief.</li>
+        <li>Switches between voice styles on request — warm instructor, energetic presenter, calm narrator — and revises takes from client feedback.</li>
+        <li>Cleans up and levels recordings using basic audio editing tools before delivery.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">Online French &amp; English Instructor</div>
+          <div class="exp-org">Sodemit Academy — Remote</div>
+        </div>
+        <div class="exp-dates">Juin 2023 – présent</div>
+      </div>
+      <ul>
+        <li>Delivers live spoken French and English instruction to international learners, using articulation, pacing, and expressive tone to hold attention.</li>
+        <li>Models pronunciation and intonation, correcting learner delivery in real time.</li>
+        <li>Evaluates spoken responses for pronunciation, clarity, tone, and accuracy against consistent standards.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">Freelance Translator &amp; Interpreter (English ↔ French)</div>
+          <div class="exp-org">General of Grace Academy — Remote</div>
+        </div>
+        <div class="exp-dates">Décembre 2019 – Mai 2023</div>
+      </div>
+      <ul>
+        <li>Provided real-time spoken interpretation during international business meetings and conferences.</li>
+        <li>Produced time-stamped transcription and reviewed audio transcripts for accuracy and consistency.</li>
+        <li>Applied contextual judgement to register and tone when literal translation didn't fit the intended meaning.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2 class="section-title">Compétences</h2>
+    <div class="skills-grid">
+      <span class="skill-pill">Voix de personnage</span>
+      <span class="skill-pill">Narration conversationnelle</span>
+      <span class="skill-pill">Contenu éducatif / explicatif</span>
+      <span class="skill-pill">Lecture à vue</span>
+      <span class="skill-pill">Ton, rythme &amp; énergie</span>
+      <span class="skill-pill">Montage audio de base</span>
+      <span class="skill-pill">Interprétation en temps réel</span>
+      <span class="skill-pill">Communication bilingue FR–EN</span>
+      <span class="skill-pill">Livraison à distance, dans les délais</span>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2 class="section-title">Formation</h2>
+    <div class="edu-row">
+      <div>
+        <div class="edu-name">Licence en Droit</div>
+        <div class="edu-org">ESTG</div>
+      </div>
+      <div class="edu-year">2018</div>
+    </div>
+    <div class="edu-row">
+      <div>
+        <div class="edu-name">Certification TEFL/TESOL (150 heures)</div>
+      </div>
+      <div class="edu-year">2017</div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2 class="contact-title">Travaillons ensemble.</h2>
+    <p style="color:var(--cream-dim); max-width:48ch;">Disponible pour des projets de voix française à distance — narration, personnages, contenu éducatif, et plus.</p>
+    <div class="contact-list">
+      <a href="mailto:princessdouglas9976@gmail.com">princessdouglas9976@gmail.com</a>
+      <a href="tel:+2348106412989">+234 810 641 2989</a>
+      <a href="https://www.linkedin.com/in/princess-douglas-4a59a23b9" target="_blank" rel="noopener">linkedin.com/in/princess-douglas-4a59a23b9</a>
+    </div>
+    <p class="foot-note">© 2026 Sarah Douglas Ukpeh · Abuja, Nigeria</p>
+  </div>
+</footer>
+
+</body>
+</html>
